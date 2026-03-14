@@ -1110,14 +1110,15 @@ footer .copyright {
     letter-spacing: 4px;
   }
 }
+
 .flag-blue{
-color:#3C3B6E;
+color:#3C3B6E !important;
 }
 
 .flag-red{
-color:#B22234;
+color:#B22234 !important;
 }
 
 .flag-white{
-color:#ffffff;
+color:#ffffff !important;
 }
