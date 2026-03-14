@@ -1114,3 +1114,36 @@ footer .copyright {
 .eyebrow .flag-blue{ color:#3C3B6E !important; }
 .eyebrow .flag-red{ color:#B22234 !important; }
 .eyebrow .flag-white{ color:#ffffff !important; }
+
+/* Premium stat animation */
+
+.stats-bar {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.stats-bar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.stat-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-number {
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+  transform: scale(1.1);
+  text-shadow: 0 0 15px var(--accent-glow);
+}
