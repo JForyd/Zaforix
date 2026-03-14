@@ -128,3 +128,56 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+/* Stats animation */
+
+const statsSection = document.querySelector(".stats-bar");
+const statItems = document.querySelectorAll(".stat-item");
+const counters = document.querySelectorAll(".stat-number[data-target]");
+
+let statsTriggered = false;
+
+const statsObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting && !statsTriggered) {
+
+      statsTriggered = true;
+
+      statsSection.classList.add("visible");
+
+      statItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("visible");
+        }, index * 200);
+      });
+
+      counters.forEach(counter => {
+
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
+        const speed = target / 120;
+
+        const updateCount = () => {
+
+          count += speed;
+
+          if (count < target) {
+            counter.innerText = Math.floor(count);
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = target;
+          }
+
+        };
+
+        updateCount();
+
+      });
+
+    }
+
+  });
+});
+
+statsObserver.observe(statsSection);
