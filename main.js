@@ -131,53 +131,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Stats animation */
 
-const statsSection = document.querySelector(".stats-bar");
-const statItems = document.querySelectorAll(".stat-item");
-const counters = document.querySelectorAll(".stat-number[data-target]");
+document.addEventListener("DOMContentLoaded", () => {
 
-let statsTriggered = false;
+  const statsSection = document.querySelector(".stats-bar");
+  const statItems = document.querySelectorAll(".stat-item");
+  const counters = document.querySelectorAll(".stat-number[data-target]");
 
-const statsObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
+  let statsTriggered = false;
 
-    if (entry.isIntersecting && !statsTriggered) {
+  const statsObserver = new IntersectionObserver(entries => {
 
-      statsTriggered = true;
+    entries.forEach(entry => {
 
-      statsSection.classList.add("visible");
+      if (entry.isIntersecting && !statsTriggered) {
 
-      statItems.forEach((item, index) => {
-        setTimeout(() => {
-          item.classList.add("visible");
-        }, index * 200);
-      });
+        statsTriggered = true;
 
-      counters.forEach(counter => {
+        statsSection.classList.add("visible");
 
-        const target = +counter.getAttribute("data-target");
-        let count = 0;
-        const speed = target / 120;
+        statItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add("visible");
+          }, index * 200);
+        });
 
-        const updateCount = () => {
+        counters.forEach(counter => {
 
-          count += speed;
+          const target = parseInt(counter.getAttribute("data-target"));
+          let count = 0;
 
-          if (count < target) {
-            counter.innerText = Math.floor(count);
-            requestAnimationFrame(updateCount);
-          } else {
-            counter.innerText = target;
-          }
+          const updateCount = () => {
 
-        };
+            const increment = Math.ceil(target / 120);
+            count += increment;
 
-        updateCount();
+            if (count < target) {
+              counter.innerText = count;
+              requestAnimationFrame(updateCount);
+            } else {
+              counter.innerText = target;
+            }
 
-      });
+          };
 
-    }
+          updateCount();
+
+        });
+
+      }
+
+    });
 
   });
-});
 
-statsObserver.observe(statsSection);
+  statsObserver.observe(statsSection);
+
+});
