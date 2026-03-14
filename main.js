@@ -128,35 +128,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
-
-/* Stats animation */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  const counters = document.querySelectorAll(".stat-number[data-target]");
-
-  counters.forEach(counter => {
-
-    const target = parseInt(counter.dataset.target);
-    let count = 0;
-
-    const speed = target / 120;
-
-    const update = () => {
-
-      count += speed;
-
-      if (count < target) {
-        counter.innerText = Math.floor(count);
-        requestAnimationFrame(update);
-      } else {
-        counter.innerText = target;
-      }
-
-    };
-
-    update();
-
-  });
-
-});
