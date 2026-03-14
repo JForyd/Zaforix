@@ -1111,14 +1111,6 @@ footer .copyright {
   }
 }
 
-.flag-blue{
-color:#3C3B6E !important;
-}
-
-.flag-red{
-color:#B22234 !important;
-}
-
-.flag-white{
-color:#ffffff !important;
-}
+.eyebrow .flag-blue{ color:#3C3B6E; }
+.eyebrow .flag-red{ color:#B22234; }
+.eyebrow .flag-white{ color:#ffffff; }
