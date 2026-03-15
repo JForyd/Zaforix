@@ -135,7 +135,11 @@ window.addEventListener("load", () => {
 
   setTimeout(() => {
 
-    startup.style.display = "none";
+    startup.style.opacity = "0";
+
+    setTimeout(() => {
+      startup.remove();
+    }, 1000);
 
   }, 2200);
 
