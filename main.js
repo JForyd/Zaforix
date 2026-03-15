@@ -128,3 +128,34 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+/* =========================
+   Startup Sequence
+========================= */
+
+window.addEventListener("load", () => {
+
+  const bird = document.getElementById("birdLogo");
+  const video = document.getElementById("introVideo");
+  const startup = document.getElementById("startup");
+
+  setTimeout(() => {
+
+    bird.style.opacity = "0";
+
+    video.style.display = "block";
+    video.play();
+
+  }, 2500);
+
+  video.addEventListener("ended", () => {
+
+    startup.style.opacity = "0";
+
+    setTimeout(() => {
+      startup.remove();
+    }, 800);
+
+  });
+
+});
