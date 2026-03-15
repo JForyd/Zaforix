@@ -1127,24 +1127,21 @@ footer .copyright {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  transition: opacity 0.8s ease;
+  z-index: 99999;
 }
 
 #startupLogo {
-  width: 180px;
+  width: 40px;   /* very small logo */
   opacity: 0;
-  animation: logoFade 2s forwards;
+  animation: logoFade 1.8s forwards;
 }
 
 @keyframes logoFade {
   0% {
     opacity: 0;
-    transform: scale(0.95);
   }
 
   100% {
     opacity: 1;
-    transform: scale(1);
   }
 }
