@@ -1128,12 +1128,14 @@ footer .copyright {
   justify-content: center;
   align-items: center;
   z-index: 99999;
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 
 #startupLogo {
-  width: 240px;   /* very small logo */
+  width: 120px;
   opacity: 0;
-  animation: logoFade 2.6s forwards;
+  animation: logoFade 1.8s forwards;
 }
 
 @keyframes logoFade {
