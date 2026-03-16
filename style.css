@@ -1120,11 +1120,16 @@ footer .copyright {
 
   0% {
     opacity: 0;
-    transform: scale(0.9);
-    filter: blur(4px);
+    transform: scale(0.92);
+    filter: blur(10px);
   }
 
-  20% {
+  15% {
+    opacity: 0.6;
+    filter: blur(6px);
+  }
+
+  30% {
     opacity: 1;
     transform: scale(1);
     filter: blur(0px);
@@ -1136,15 +1141,20 @@ footer .copyright {
     filter: blur(0px);
   }
 
-  85% {
-    opacity: 0.6;
-    filter: blur(4px);
+  75% {
+    opacity: 0.9;
+    filter: blur(2px);
+  }
+
+  90% {
+    opacity: 0.4;
+    filter: blur(6px);
   }
 
   100% {
     opacity: 0;
     transform: scale(1.06);
-    filter: blur(8px);
+    filter: blur(12px);
   }
 
 }
