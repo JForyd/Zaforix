@@ -354,6 +354,10 @@ p {
    Hero Section — Cinematic Fullscreen
    ============================================ */
 
+/* ============================================
+   Hero Section — Cinematic Fullscreen (Tightened)
+   ============================================ */
+
 .hero {
   position: relative;
   height: 100vh;
@@ -361,11 +365,12 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* Keeps the group centered vertically */
   align-items: center;
   text-align: center;
   overflow: hidden;
 }
+
 .hero-bg {
   position: absolute;
   top: 0;
@@ -387,36 +392,35 @@ p {
   position: absolute;
   inset: 0;
   z-index: 1;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(5,5,5,0.65) 0%,
-      rgba(5,5,5,0.15) 15%,
-      rgba(5,5,5,0.05) 40%,
-      rgba(5,5,5,0.55) 80%,
-      var(--bg-primary) 100%
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(5,5,5,0.65) 0%,
+    rgba(5,5,5,0.15) 15%,
+    rgba(5,5,5,0.05) 40%,
+    rgba(5,5,5,0.55) 80%,
+    var(--bg-primary) 100%
+  );
 }
 
-.hero-content{
-  max-width:1400px;
-  width:100%;
-  padding:0 2rem;
-
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-
-  z-index:2;
+.hero-content {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  /* Pulls the entire content block up slightly for better visual balance */
+  transform: translateY(-20px); 
 }
 
-.hero-title {
-  font-size: clamp(4.5rem, 14vw, 12rem);
-  letter-spacing: clamp(8px, 2vw, 20px);
-  text-shadow: 0 0 80px var(--accent-glow-subtle), 0 2px 40px rgba(0,0,0,0.5);
-  margin-bottom: 1.5rem;
-  line-height: 0.95;
+.hero-logo {
+  /* Reduced max-width slightly to prevent huge vertical footprints */
+  width: clamp(500px, 55vw, 1200px); 
+  height: auto;
+  display: block;
+  /* Removed the 1rem bottom margin to bring the tagline up */
+  margin: 0 auto 0 auto; 
 }
 
 .hero-tagline {
@@ -424,25 +428,28 @@ p {
   font-weight: 300;
   color: rgba(255,255,255,0.55);
   letter-spacing: 3px;
-  margin-bottom: 3.5rem;
   text-transform: uppercase;
+  /* Using a negative margin to pull the text closer to the logo graphics */
+  margin-top: -0.5rem; 
+  /* Reduced bottom margin to bring buttons up */
+  margin-bottom: 2rem; 
 }
 
 .hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.hero-logo {
-  width: clamp(700px, 60vw, 1600px);
-  height: auto;
-
-  display:block;
-  margin:0 auto 1rem auto;
+/* Optional: In case you are still using the h1 title instead of the logo */
+.hero-title {
+  font-size: clamp(4.5rem, 14vw, 12rem);
+  letter-spacing: clamp(8px, 2vw, 20px);
+  text-shadow: 0 0 80px var(--accent-glow-subtle), 0 2px 40px rgba(0,0,0,0.5);
+  margin-bottom: 1rem;
+  line-height: 0.95;
 }
-
 /* Scroll indicator */
 .hero-scroll {
   position: absolute;
