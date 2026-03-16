@@ -168,8 +168,12 @@ p {
    Navigation — Refined & Transparent
    ============================================ */
 
+/* ============================================
+   Navigation — Refined & Transparent
+   ============================================ */
+
 .navbar {
-  position: sticky;
+  position: fixed; /* Changed from sticky to fixed for better hero integration */
   top: 0;
   left: 0;
   width: 100%;
@@ -180,12 +184,20 @@ p {
   align-items: center;
   z-index: 1000;
 
-  background: transparent;
+  /* Force total transparency and no border initially */
+  background: transparent !important;
+  border-bottom: 1px solid transparent !important;
+  box-shadow: none !important;
 
-  opacity: 1;
-  transition: opacity 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* This triggers ONLY when you scroll down */
+.navbar.scrolled {
+  background: rgba(5, 5, 5, 0.96) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5) !important;
+}
 .navbar.scrolled {
   background: rgba(5,5,5,0.96);
   border-bottom: 1px solid var(--border-subtle);
@@ -364,7 +376,7 @@ p {
   /* Changed from center to flex-start to allow manual positioning */
   justify-content: flex-start; 
   /* Adjust this percentage to move the whole group up or down (e.g., 5vh is higher) */
-  padding-top: 10vh; 
+  padding-top: 12vh; 
   align-items: center;
   text-align: center;
   overflow: hidden;
