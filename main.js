@@ -86,21 +86,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ---- Navbar scroll behavior ----
 const navbar = document.getElementById("navbar");
-const hero = document.querySelector(".hero");
 
-if (navbar && hero) {
+if (navbar) {
 
   function updateNavbar() {
 
-    const heroHeight = hero.offsetHeight;
-
-    if (window.scrollY > heroHeight * 0.25) {
+    if (window.scrollY > 40) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
     }
 
   }
+
+  window.addEventListener("scroll", updateNavbar, { passive: true });
+  window.addEventListener("load", updateNavbar);
+
+}
 
   window.addEventListener("scroll", updateNavbar, { passive: true });
   window.addEventListener("load", updateNavbar);
