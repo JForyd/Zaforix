@@ -425,7 +425,7 @@ p {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(5,5,5,0.75) 0%, rgba(5,5,5,0.55) 35%, rgba(5,5,5,0.35) 65%, transparent 90%, var(--bg-primary) 100%);
+    linear-gradient(180deg, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.55) 35%, rgba(5,5,5,0.85) 65%, transparent 90%, var(--bg-primary) 100%);
 }
 
 .hero-content {
@@ -474,7 +474,7 @@ p {
 
 .hero-scroll span {
   font-family: var(--font-heading);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 4px;
   color: white;
   text-transform: uppercase;
