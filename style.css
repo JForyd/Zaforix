@@ -1090,6 +1090,9 @@ footer .copyright {
   position: fixed;
   inset: 0;
   background: black;
+
+  backdrop-filter: blur(6px);   /* add this line */
+
   display: flex;
   justify-content: center;
   align-items: center;
