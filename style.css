@@ -367,6 +367,8 @@ p {
   align-items: center;
   text-align: center;
   overflow: hidden;
+
+  margin-top: calc(-1 * var(--nav-height));
 }
 
 .hero-bg {
