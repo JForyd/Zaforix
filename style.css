@@ -367,6 +367,7 @@ p {
 
   text-align: center;
   overflow: hidden;
+  margin-top: calc(-1 * var(--nav-height));
 }
 
 .hero-bg {
@@ -489,6 +490,7 @@ p {
   position: relative;
   overflow: hidden;
   background-color: var(--bg-primary);
+  margin-top: calc(-1 * var(--nav-height));
 }
 
 .page-header.with-bg {
