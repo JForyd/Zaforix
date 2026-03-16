@@ -84,18 +84,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 // ---- Navbar scroll behavior ----
+// ---- Navbar scroll behavior ----
 const navbar = document.getElementById("navbar");
 
 function updateNavbar() {
   if (!navbar) return;
 
-  if (window.scrollY <= 10) {
+  // If at the very top (0-20px), remove the background
+  if (window.scrollY <= 20) {
     navbar.classList.remove("scrolled");
   } else {
     navbar.classList.add("scrolled");
   }
 }
 
+// Ensure it checks on scroll, on load, and even if the page starts mid-way down
+window.addEventListener("scroll", updateNavbar, { passive: true });
+window.addEventListener("load", updateNavbar);
 window.addEventListener("scroll", updateNavbar, { passive: true });
 window.addEventListener("load", updateNavbar);
 
