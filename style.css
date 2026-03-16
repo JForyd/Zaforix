@@ -202,6 +202,7 @@ p {
   display: block;
 }
 
+
 /* ============================================
    Navigation — Refined & Transparent
    ============================================ */
@@ -219,15 +220,6 @@ p {
   z-index: 1000;
   background: linear-gradient(180deg, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.6) 50%, transparent 100%);
   transition: all var(--transition-base);
-
-   /*Transparent at the top of the page*/
-   background: transparent;
-   transition: all vary(--transition-base);
-
-   /* Black navbar when scrolling up mid-page */
-.navbar.scrolled {
-  background: rgba(0,0,0,0.95);
- 
 }
 
 .navbar.scrolled {
