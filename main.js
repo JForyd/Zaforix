@@ -19,7 +19,7 @@ document.querySelectorAll("a[href]").forEach(link => {
 });
 
 /* ============================================
-   ZAFORIX — Main JavaScript v2
+   Kozanni — Main JavaScript v2
    Premium Interactions & Animations
    ============================================ */
 
