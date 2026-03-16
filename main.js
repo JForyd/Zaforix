@@ -137,21 +137,19 @@ if (navbar) {
 window.addEventListener("load", () => {
 
   const startup = document.getElementById("startup");
-
   if (!startup) return;
 
   document.body.classList.add("no-scroll");
 
+  // wait for logo animation
   setTimeout(() => {
 
     startup.style.opacity = "0";
 
     setTimeout(() => {
-
       startup.remove();
       document.body.classList.remove("no-scroll");
-
-    }, 2000);
+    }, 2500);
 
   }, 3500);
 
