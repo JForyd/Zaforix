@@ -1130,10 +1130,3 @@ footer .copyright {
 }
 
 
-body.page-exit {
-  opacity: 0;
-  transform: translateY(-20px);
-  filter: blur(10px);
-  transition: all 0.35s ease;
-  background: black;
-}
