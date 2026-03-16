@@ -1127,7 +1127,7 @@ footer .copyright {
   align-items: center;
   z-index: 99999;
   opacity: 1;
-  transition: opacity 1s ease;
+  transition: opacity 2.5s ease;
 
   pointer-events: all;
 }
