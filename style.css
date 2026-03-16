@@ -427,23 +427,24 @@ p {
   font-weight: 300;
   color: rgba(255,255,255,0.55);
   letter-spacing: 3px;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.6rem;
   text-transform: uppercase;
 }
 
 .hero-actions {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .hero-logo{
-  width: clamp(700px, 60vw, 1600px);   /* much bigger */
+  width: clamp(700px, 60vw, 1600px);
   height: auto;
 
   display:block;
-  margin:8vh auto 2rem auto;           /* pushes it lower + centers it */
+  margin:2vh auto 1.2rem auto;   /* smaller margin */
+
 }
 
 /* Scroll indicator */
