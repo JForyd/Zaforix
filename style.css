@@ -183,18 +183,14 @@ p {
   background: transparent;
 
   opacity: 0;
-  transform: translateY(-10px);
+  pointer-events: none;
 
-  transition: opacity 0.45s ease, transform 0.45s ease, background 0.45s ease, box-shadow 0.45s ease;
-}
-
-.navbar.scrolled {
-  backdrop-filter: blur(8px);
+  transition: opacity 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
 }
 
 .navbar.scrolled {
   opacity: 1;
-  transform: translateY(0);
+  pointer-events: auto;
 
   background: rgba(5,5,5,0.96);
   border-bottom: 1px solid var(--border-subtle);
