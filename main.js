@@ -140,14 +140,6 @@ window.addEventListener("load", () => {
 
   if (!startup) return;
 
-  // Only play intro once per session
-  if (sessionStorage.getItem("introPlayed") === "true") {
-    startup.remove();
-    return;
-  }
-
-  sessionStorage.setItem("introPlayed", "true");
-
   document.body.classList.add("no-scroll");
 
   setTimeout(() => {
@@ -155,10 +147,12 @@ window.addEventListener("load", () => {
     startup.style.opacity = "0";
 
     setTimeout(() => {
+
       startup.remove();
       document.body.classList.remove("no-scroll");
-    }, 2500);
 
-  }, 2500);
+    }, 2000);
+
+  }, 3500);
 
 });
