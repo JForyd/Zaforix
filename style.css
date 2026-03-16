@@ -1114,7 +1114,7 @@ footer .copyright {
 #startupLogo {
   width: 120px;
   opacity: 0;
-  animation: logoFade 3.2s cubic-bezier(.33,.01,.19,1) forwards;
+  animation: logoFade 3.0s cubic-bezier(.33,.01,.19,1) forwards;
 }
 
 @keyframes logoFade {
