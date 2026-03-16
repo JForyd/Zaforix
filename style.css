@@ -1106,37 +1106,38 @@ footer .copyright {
 #startupLogo {
   width: 120px;
   opacity: 0;
-  animation: logoFade 3.2s ease forwards;
+  animation: logoFade 3.2s cubic-bezier(.33,.01,.19,1) forwards;
 }
 
 @keyframes logoFade {
+
   0% {
     opacity: 0;
-    transform: scale(0.85);
-    filter: blur(2px);
+    transform: scale(0.9);
+    filter: blur(8px);
   }
 
-  25% {
+  20% {
     opacity: 1;
     transform: scale(1);
-    filter: blur(0);
+    filter: blur(0px);
   }
 
-  55% {
+  60% {
     opacity: 1;
     transform: scale(1.02);
-    filter: drop-shadow(0 0 20px rgba(255,247,0,0.15));
+    filter: blur(0px);
   }
 
-  75% {
-    opacity: 1;
-    transform: scale(1);
+  85% {
+    opacity: 0.6;
+    filter: blur(4px);
   }
 
   100% {
     opacity: 0;
-    transform: scale(1.05);
-    filter: blur(2px);
+    transform: scale(1.06);
+    filter: blur(10px);
   }
-}
 
+}
