@@ -98,6 +98,8 @@ if (navbar) {
 
   window.addEventListener('scroll', updateNavbar, { passive: true });
 
+  // Run once when the page loads
+  updateNavbar();
 }
 
   // ---- Parallax effect on hero background ----
