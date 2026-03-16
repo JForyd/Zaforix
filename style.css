@@ -1135,20 +1135,26 @@ footer .copyright {
 #startupLogo {
   width: 120px;
   opacity: 0;
-  animation: logoFade 2.0s forwards;
+  animation: logoFade 3.5s ease forwards;
 }
 
 @keyframes logoFade {
   0% {
     opacity: 0;
+    transform: scale(0.9);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  70% {
+    opacity: 1;
   }
 
   100% {
-    opacity: 1;
+    opacity: 0;
+    transform: scale(1.05);
   }
-}
-
-body.no-scroll {
-  overflow: hidden;
-  height: 100vh;
 }
