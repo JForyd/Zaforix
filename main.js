@@ -135,7 +135,10 @@ window.addEventListener("load", () => {
 
   const startup = document.getElementById("startup");
 
-  // If there is no startup animation, do nothing
+  // Always make sure scrolling is enabled first
+  document.body.classList.remove("no-scroll");
+
+  // If no startup element exists, stop here
   if (!startup) return;
 
   // Lock scrolling
@@ -146,9 +149,10 @@ window.addEventListener("load", () => {
     startup.style.opacity = "0";
 
     setTimeout(() => {
+
       startup.remove();
 
-      // Unlock scrolling
+      // Always restore scrolling
       document.body.classList.remove("no-scroll");
 
     }, 1000);
