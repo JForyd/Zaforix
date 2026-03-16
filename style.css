@@ -1120,10 +1120,7 @@ footer .copyright {
 
 #startup {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  inset: 0;
   background: black;
   display: flex;
   justify-content: center;
@@ -1131,6 +1128,8 @@ footer .copyright {
   z-index: 99999;
   opacity: 1;
   transition: opacity 1s ease;
+
+  pointer-events: all;
 }
 
 #startupLogo {
