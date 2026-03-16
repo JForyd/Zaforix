@@ -433,14 +433,18 @@ p {
 }
 
 .hero-logo {
-  width: clamp(520px, 70vw, 1400px);
+  width: clamp(500px, 70vw, 1400px);  /* much larger */
   height: auto;
 
-  display: block;
-  margin: 6rem auto 2rem auto;
+  margin: 5vh auto 2rem auto;  /* centers + moves down */
 
-  filter: drop-shadow(0 0 40px rgba(0,0,0,0.35));
+  display: block;
+
+  filter:
+    drop-shadow(0 0 40px rgba(0,0,0,0.35))
+    drop-shadow(0 0 120px rgba(255,255,255,0.08));
 }
+
 /* Scroll indicator */
 .hero-scroll {
   position: absolute;
