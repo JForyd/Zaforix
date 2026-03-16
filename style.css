@@ -1257,7 +1257,7 @@ footer .copyright {
   width: clamp(400px, 50vw, 1200px);
   height: auto;
   /* Adjust the 4rem to push it further down or up from the top */
-  margin-top: 4rem !important; 
+  margin-top: 10rem !important; 
   /* Negative margin here pulls the tagline UP toward the logo */
   margin-bottom: -2rem !important; 
 }
