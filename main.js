@@ -89,11 +89,13 @@ const navbar = document.getElementById("navbar");
 if (navbar) {
 
   function updateNavbar() {
-    if (window.scrollY > 40) {
+
+    if (window.scrollY > 80) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
     }
+
   }
 
   window.addEventListener("scroll", updateNavbar, { passive: true });
